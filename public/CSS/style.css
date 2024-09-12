@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,600&family=Quicksand:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     transition: all .2s linear; 
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    font-size: 62.5%;
+    height: 100%;
+    /* width: 100%; */
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-ex-sml: 1.2rem;
+    --font-sml: 1.5rem;
+    --font-md: 2.5rem;
+    --font-lg: 3.5rem;
+    --font-ex-lg: 5.5rem;
+
+
+    --icon-back: #76cdec;
+    --font-color-primary: #136994;
+
+
+    --background-gradient: linear-gradient(to top, #3bbbea, #3ebcea, #41bdea, #43bdea, #46beea, #48bfea, #4bbfea, #4dc0ea, #50c1ea, #53c2ea, #55c3eb, #58c4eb);
+    --secondary-card: #99dbf3;
+    --optional-wave: linear-gradient(to right top, #46c7f1, #5eccf2, #71d1f2, #82d6f3, #92dbf4);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/** CONTAINER STYLE  */
+
+.container {
+    display: block;
+    position: absolute;
+    text-align: center;
+    min-width: 320px;
+    background: var(--background-gradient);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    overflow: hidden;
+}
+
+/** BACK BTN STYLE  */
+
+nav {
+    display: flex;
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+a {
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 0rem .4rem;
+}
+a:hover {
+    color: var(--font-color-primary);
+}
+
+/** FORM STYLE  */
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .9rem;
+    position: relative;
+}
+
+.input #search {
+    width: 30rem;
+    height: 4.5rem;
+    border-radius: .6rem;
+    padding: .5rem;
+    font-size: var(--font-sml);
+    background: var(--optional-wave);
+    color: var(--font-color-primary);
+    border: 1px solid #fff;
+    text-align: center;
+    font-weight: 500;
+}
+::placeholder {
+    color: #fff;
+    opacity: .7;
+}
+
+
+.input #submit {
+    position: absolute;
+    font-size: var(--font-sml);
+    background-color: var(--font-color-primary);
+    color: #fff;
+    border-radius: .5rem;
+    right: .5rem;
+    height: 3.7rem;
+    padding: .5rem;
+}
+
+.input #submit:hover {
+    color: var(--font-color-primary);
+    background-color: #fff;
+}
+
+.warn{
+    color: #FF1818;
+    font-size: var(--font-sml);
+}
+
+/** INFO STYLE  */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#city {
+    color: #fff;
+    font-size: var(--font-md);
+    font-weight: 500;
+}
+
+.date {
+    font-size: var(--font-sml);
+    text-align: center;
+}
+
+.info #temp {
+    position: relative;
+    font-size: var(--font-lg);
+    color: #fff;
+}
+
+#temp #status img{
+    position: absolute;
+    /* background-color: red; */
+    left: 4.5rem;
+    top: 1px;
+    width: 15rem;
+    display: inline;
+}
+
+.info .status-text {
+    font-size: var(--font-md);
+    margin-bottom: .5rem;
+    z-index: 1000;
+}
+
+
+/** OTHER INFO STYLE  */
+
+.other-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--secondary-card);
+    padding: 1rem 0;
+    border-radius: .5rem;
+    margin: .5rem 0;
+}
+
+
+.other-info .fa-solid {
+    width: 37px;
+    height: 37px;
+    border: 1px solid #000;
+    color: #fff;
+    font-size: var(--font-md);
+    padding: .5rem;
+    border-radius: 50%;
+}
+
+.other-info h4 {
+    font-size: var(--font-sml);
+}
+
+.other-info p {
+    font-size: var(--font-ex-sml);
+    font-weight: 400;
+}
+
+/** FUTURE INFO STYLE  */
+
+.future {
+    font-size: var(--font-sml);
+    margin-top: .5rem;
+}
+
+.future-weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-sml);
+    margin: 1.5rem 0;
+    color: #fff;
+}
+
+.future-weather .box {
+    background: var(--secondary-card);
+    border-radius: .5rem;
+}

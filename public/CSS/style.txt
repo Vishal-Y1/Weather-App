@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,600&family=Quicksand:wght@300;400;500&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+     transition: all .2s linear; 
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+html , body{
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+:root {
+    /* --font-sml: ;
+    --font-md: ;
+    --font-lg: ; */
+
+
+    --icon-back: #76cdec;
+    --font-color-primary: #136994;
+
+
+    --background-gradient: linear-gradient(to top, #3bbbea, #3ebcea, #41bdea, #43bdea, #46beea, #48bfea, #4bbfea, #4dc0ea, #50c1ea, #53c2ea, #55c3eb, #58c4eb);
+    --secondary-card: #99dbf3;
+    --optional-wave: linear-gradient(to right top, #46c7f1, #5eccf2, #71d1f2, #82d6f3, #92dbf4);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30.5rem;
+    /* height: 80%; */
+    background: var(--background-gradient);
+    padding: 2.6rem  0;
+    border-radius: 2rem;
+    row-gap: .5rem;
+
+    box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+}
+
+.input {
+    position: relative;
+    min-width: 33rem;
+    min-height: 5rem;
+    overflow: hidden;
+    /* box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75); */
+}
+
+#search {
+    width: 100%;
+    height: 100%;
+    border-radius: .6rem;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+
+.input #submit {
+    position: absolute;
+    top: .3rem;
+    right: 1rem;
+    font-size: 1.9rem;
+    padding: .8rem;
+    font-weight: 500;
+    text-align: center;
+    background: rgb(157, 220, 244);
+    color: var(--font-color-primary);
+    border-radius: 1rem;
+}
+
+.input #submit:hover {
+    /* scale: 1.1; */
+    color: #fff;
+    background-color: var(--font-color-primary);
+}
+
+
+/** Warn*/
+.warn{
+    color: red;
+    font-size: 2.5rem;
+}
+
+/** Info style  */
+
+.info {
+    color: var(--font-color-primary);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info #city {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.info .date {
+    font-size: 1.9rem;
+    font-weight: 300;
+
+}
+
+.info #temp {
+    font-size: 6.5rem;
+    font-weight: 600;
+    position: relative;
+    color: #ffff;
+}
+
+.info #temp #status img{
+    min-width: 20rem;
+    position: absolute;
+    left: 8.6rem;
+    top: 0;
+}
+
+.info .status-text {
+    font-size: 3rem;
+    margin-top: 3.5rem;
+    font-weight: 500;
+}
+
+/** Other Info  */
+
+.other-info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.5rem;
+    background-color: var(--secondary-card);
+    color: var(--font-color-primary);
+    border-radius: .5rem;
+    padding: .5rem ;
+    width: 33rem;
+    margin-top: 2.5rem;
+    /* box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75); */
+}
+
+.other-info .fa-solid {
+    font-size: 2.5rem;
+    background-color: var(--icon-back);
+    padding: .7rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+
+
+/**Future weather */
+
+.future-weather {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(1, 1fr); */
+    font-size: 1rem;
+    column-gap: 1.5rem;
+    padding: 0 1.5rem;
+}
+
+.future{
+    margin: 1.3rem 0;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.future-weather .box {
+    background-color: var(--secondary-card);
+    font-size: 1.5rem;
+    color: #ffffff;
+    border-radius: 2.6rem;
+    padding: .5rem 1.5rem;
+    /* box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -webkit-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75);
+    -moz-box-shadow: 4px 7px 5px 0px rgba(2,44,52,0.75); */
+}
+
+.future-weather .box img {
+    min-width: 7.5rem;
+}
+
+
+
+/** Back  */
+
+.back{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-left: 2.8rem;
+    align-self: self-start;
+}
+
+.back a {
+    text-decoration: none;
+    color: #fff;
+    background: rgb(157, 220, 244);
+    padding: .1rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.back a:hover {
+    color: #000;
+    background-color: #fff;
+}

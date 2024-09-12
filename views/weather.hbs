@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!--? font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--? Swiper js link  -->
+    <script src="    https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!--? Swiper CSS link  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
+    <!--? Custom stylesheet  -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="container">
+
+        <nav>
+            <div class="back">
+                <a href="/"><i class="fa-solid fa-arrow-left"></i></a>
+            </div>
+        </nav>
+        
+        <form class="input" method="get" action="/weather">
+            <input type="text" id="search" name="city" placeholder="search city" autocomplete="off"  style="text-transform: capitalize;">
+            <button id="submit" style="text-transform: capitalize;">Search</button>
+        </form>
+        <div class="info">
+            {{!-- <p id="city"><i class="fa-solid fa-location-dot" style="color: #000;"></i>&nbsp;{%CITY%}</p> --}}
+            <p id="city"><i class="fa-solid fa-location-dot" style="color: #000;"></i>&nbsp;{{data.name}}, {{data.sys.country}}</p>
+            <p class="date">21-8-2023</p>
+            <h1 id="temp">{{data.main.temp}} <sup>°C</sup><span id="status"><img src="images/SVG/cloudy-night-3.svg" alt=""></span></h1>
+            <h3 id="status-text" class="status-text">{{statustext}}</h3>
+        </div>
+            <div class="other-info">
+                <div class="p-content">
+                    <i class="fa-solid fa-sliders"></i>
+                    <h4 id="pressure">{{data.main.pressure}} M/B</h4>
+                    <p>pressure</p>
+                </div>
+                <div class="h-content">
+                    <i class="fa-solid fa-droplet"></i>
+                    <h4 id="humidity">{{data.main.humidity}}%</h4>
+                    <p>Humidity</p>
+                </div>
+                <div class="w-content">
+                    <i class="fa-solid fa-wind"></i>
+                    <h4 id="wind-speed">{{data.wind.speed}} M/S</h4>
+                    <P>Wind Speed</P>
+                </div>
+            </div>
+            <h3 class="future">5 days weather forecast (slide)</h3>
+            <div class="future-weather">  
+                <div class="box">
+                    <p class="first-date">22-08-2023</p>
+                    <div class="first-status">
+                        <img src="images/SVG/cloudy-day-1.svg" alt="">
+                    </div>
+                    <h4 id="first-temp">33.09°c</h4>
+                </div>
+                <div class="box">
+                    <p class="second-date">23-08-2023</p>
+                    <div class="second-status">
+                        <img src="images/SVG/rainy-2.svg" alt="">
+                    </div>
+                    <h4 id="second-temp">33.09°c</h4>
+                </div>
+                <div class="box">
+                    <p class="third-date">24-08-2023</p>
+                    <div class="third-status">
+                        <img src="images/SVG/night.svg" alt="">
+                    </div>
+                    <h4 id="third-temp">33.09°c</h4>
+                </div>
+                <!-- <div class="box">
+                    <p class="third-date">25-08-2023</p>
+                    <div class="third-status">
+                        <img src="images/SVG/night.svg" alt="">
+                    </div>
+                    <h4 id="third-temp">33.09°c</h4>
+                </div>
+                <div class="box">
+                    <p class="third-date">26-08-2023</p>
+                    <div class="third-status">
+                        <img src="images/SVG/night.svg" alt="">
+                    </div>
+                    <h4 id="third-temp">33.09°c</h4>
+                </div> -->
+            </div>
+        </div>
+     {{!-- <script src="JS/main.js"> --}}
+        </script>
+</body>
+</html>
